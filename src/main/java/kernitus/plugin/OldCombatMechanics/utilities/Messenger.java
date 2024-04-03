@@ -69,7 +69,7 @@ public class Messenger {
      * @param args    The args to format the message with.
      */
     private static void sendWithPrefix(CommandSender sender, String message, String prefix, Object... args) {
-        sendNoPrefix(sender, prefix + " " + message, args);
+        sendNoPrefix(sender, prefix + message, args);
     }
 
     public static void send(CommandSender sender, String message, Object... args) {
