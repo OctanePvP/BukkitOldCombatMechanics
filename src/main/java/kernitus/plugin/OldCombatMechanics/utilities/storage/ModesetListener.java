@@ -68,12 +68,6 @@ public class ModesetListener extends OCMModule {
             playerData.setModesetForWorld(worldId, modesetName);
             PlayerStorage.setPlayerData(playerId, playerData);
             PlayerStorage.scheduleSave();
-
-            Messenger.send(player,
-                    Config.getConfig().getString("mode-messages.mode-set",
-                            "&4ERROR: &rmode-messages.mode-set string missing"),
-                    modesetName
-            );
         }
     }
 
