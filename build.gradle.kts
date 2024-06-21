@@ -34,9 +34,6 @@ repositories {
     maven("https://repo.codemc.org/repository/maven-public/")
     // Auth library from Minecraft
     maven("https://libraries.minecraft.net/")
-    // Spartan API
-    maven("https://repo.crazycrew.us/api")
-    maven("https://repo.minebench.de/")
     // Protocollib
     maven("https://repo.dmulloy2.net/repository/public/")
 }
@@ -47,12 +44,10 @@ dependencies {
     compileOnly("io.netty:netty-all:4.1.106.Final")
     // Placeholder API
     compileOnly("me.clip:placeholderapi:2.11.5")
-    // Spartan API
-    compileOnly("me.vagdedes.spartan:SpartanAPI:9.0")
     // For BSON file serialisation
-    implementation("org.mongodb:bson:4.11.1")
+    implementation("org.mongodb:bson:5.0.1")
     // Spigot
-    compileOnly("org.spigotmc:spigot-api:1.20.3-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.20.6-R0.1-SNAPSHOT")
     // ProtocolLib
     compileOnly("com.comphenix.protocol:ProtocolLib:5.1.0")
 
@@ -67,13 +62,14 @@ dependencies {
 }
 
 group = "kernitus.plugin.OldCombatMechanics"
-version = "2.0.2-beta"
+version = "2.0.3-beta"
 description = "OldCombatMechanics"
 
 java {
     toolchain {
-        // At least 17 required for MC 1.19 for ingametesting
-        languageVersion.set(JavaLanguageVersion.of(8))
+        // We can build with Java 17 but still support MC >=1.9
+        // This is because MC >=1.9 server can be run with higher Java versions
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
