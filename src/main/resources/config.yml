@@ -119,6 +119,16 @@ old-tool-damage:
     DIAMOND_HOE: 1
     NETHERITE_HOE: 1
 
+
+# SplitYoSis
+armour-durability-damage:
+  # Handle armor durability damage, Set a cooldown to fix the issue where high CPS results in gear breaking faster.
+  enabled: true
+  cooldown: 19
+  custom-damages:
+    # Custom durability damage by the material of the object
+    DIAMOND_AXE: 3
+
 old-critical-hits:
   # Makes critical hits work like in 1.8
   # With a critical hit, the damage will be multiplied by 1.5

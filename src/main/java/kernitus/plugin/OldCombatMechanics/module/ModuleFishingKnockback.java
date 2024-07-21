@@ -56,7 +56,7 @@ public class ModuleFishingKnockback extends OCMModule {
         // FISHING_HOOK -> FISHING_BOBBER in >=1.20.5
         EntityType fishingBobberType;
         try {
-            fishingBobberType = EntityType.FISHING_BOBBER;
+            fishingBobberType = EntityType.FISHING_HOOK;
         } catch (NoSuchFieldError e) {
             fishingBobberType = EntityType.valueOf("FISHING_HOOK");
         }
